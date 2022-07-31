@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,initial-scale=1.0"
+    />
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="styles-pair.css" />
+    <script src="comandos.mjs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <!-- <body onload="inicio()"> -->
+  <body>
+    <div class="contenedor">
+      <div class="titulo" id="comun">JUEGO DE PARES</div>
+      <div class="ranking" id="comun">
+        <a href="tabla.html" class="link">Highscore</a>
+      </div>
+      <div class="tiempo" id="comun">
+        <span id="minutes">00</span>:<span id="seconds">00</span>,<span
+          id="tens"
+          >0</span
+        >
+      </div>
+      <div class="cartas">
+        <div class="base" id="contenedor">
+          <div class="card" id="uno">
+            <img
+              id="1"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+              data-estado="dorso"
+            />
+          </div>
+          <div class="card" id="dos">
+            <img
+              id="2"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="tres">
+            <img
+              id="3"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="cuatro">
+            <img
+              id="4"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="cinco">
+            <img
+              id="5"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="seis">
+            <img
+              id="6"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="siete">
+            <img
+              id="7"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="ocho">
+            <img
+              id="8"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="nueve">
+            <img
+              id="9"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="diez">
+            <img
+              id="10"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="once">
+            <img
+              id="11"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+          <div class="card" id="doce">
+            <img
+              id="12"
+              src="./imgcartas/reverso.png"
+              onclick="prueba(this.id)"
+              class="imagenes"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="boxBack">
+      <div id="boxWrap">
+        <!-- <img id="backgroundend" src="./imgcartas/ganador.jpg" alt="" /> -->
+        <div id="boxTxt"></div>
+        <div id="guardar">
+          <input
+            class="boton"
+            type="button"
+            value="Guardar Puntuación"
+            onclick="guardar()"
+          />
+        </div>
+        <div id="volver">
+          <input
+            class="boton"
+            type="button"
+            value="Volver a Jugar"
+            onclick="reiniciar()"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

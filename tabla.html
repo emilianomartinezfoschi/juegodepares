@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,initial-scale=1.0"
+    />
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="styles-pair.css" />
+    <script src="comandos.mjs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <!-- <body onload="inicio()"> -->
+  <body>
+    <div class="contenedor">
+      <div class="titulo" id="comun">JUEGO DE PARES</div>
+      <div class="ranking" id="comun">
+        <a href="index.html" class="link">Volver</a>
+      </div>
+      <div class="tiempo" id="comun">
+        <span id="minutes">00</span>:<span id="seconds">00</span>,<span
+          id="tens"
+          >0</span
+        >
+      </div>
+      <div class="cartas">
+        <div class="basescore">
+          <span id="contenodorscore">Ejemplo</span>
+          <!-- <div class="basescore"></div> -->
+        </div>
+      </div>
+      <script>
+        window.onload = function puntaje() {
+          if (typeof Storage !== "undefined") {
+            if (localStorage.puntaje == null) {
+              document.getElementById("contenodorscore").innerHTML =
+                "Debes ganar al menos una vez para ver tu mejor puntaje";
+            } else {
+              document.getElementById("contenodorscore").innerHTML =
+                "Tu mejor puntaje es: " +
+                "<br />" +
+                localStorage.getItem("puntaje");
+            }
+            // console.log("Con puntos");
+            // Code for localStorage/sessionStorage.
+          } else {
+            document.getElementById("contenodorscore").innerHTML =
+              "Tu navegador no es compatible con esta función";
+            // Sorry! No Web Storage support..
+            // console.log("Sin puntos");
+          }
+        };
+      </script>
+    </div>
+  </body>
+</html>
