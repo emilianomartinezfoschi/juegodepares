@@ -189,3 +189,4 @@ function guardar() {
   console.log(score);
   window.location.reload();
 }
+// cargado a github
